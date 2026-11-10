@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 240" role="img" aria-label="Lavoura ao amanhecer">
+  <rect width="1200" height="240" fill="#e4f1e7"/>
+  <circle cx="940" cy="78" r="40" fill="#f2c94c"/>
+  <path d="M0 150 C180 100 340 120 520 140 C720 162 900 110 1200 135 L1200 240 L0 240 Z" fill="#a9d3b4"/>
+  <path d="M0 176 C200 142 420 166 640 171 C860 176 1000 150 1200 168 L1200 240 L0 240 Z" fill="#4ea36a"/>
+  <path d="M0 200 C300 186 700 206 1200 193 L1200 240 L0 240 Z" fill="#226b42"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M0 213 C300 203 700 220 1200 206" stroke="#1b5233" stroke-width="3"/>
+    <path d="M0 226 C300 217 700 233 1200 221" stroke="#1b5233" stroke-width="4"/>
+    <path d="M0 192 C300 180 700 196 1200 184" stroke="#2e8653" stroke-width="2"/>
+  </g>
+</svg>
