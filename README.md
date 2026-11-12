@@ -78,4 +78,5 @@ Forncer uma platafroma de gerenciamento agrícola em que o produtor veja tudo qu
 ## Observação
 
 - O README foi desenvolvido pelo IA.
-- Existe as pasta de video e audio, como estao vazias não realizou o upload da pasta no github
+- Existe as pasta de video e audio, como estao vazias não realizou o upload da pasta no github.
+- A utilização do java foi realizada em poucas pagina para demostração de funcionalidades somente
