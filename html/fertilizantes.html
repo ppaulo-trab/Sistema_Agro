@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizantes</title>
+    <link rel="stylesheet" href="../css/fertilizantes.css">
+</head>
+<body>
+        <div id="header">
+            <h1>Safra Viva</h1>
+            <img src="../img/campo.svg" alt="Lavoura ao amanhecer">
+            <div id="nav">
+                <a href="home.html">Home</a>
+                <a href="producao.html">Produção</a>
+                <a href="cronograma.html">Cronograma</a>
+                <a href="pragas.html">Pragas</a>
+                <a href="fertilizantes.html" class="ativo">Fertilizantes</a>
+                <a href="custos.html">Custos</a>
+                <a href="ganho.html">Ganho futuro</a>
+                <a href="maquinario.html">Maquinário</a>
+                <a href="fornecedores.html">Fornecedores</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+ 
+        <div id="main">
+            <section>
+                <h2>Controle de fertilizantes</h2>
+                <p>Informe o que você tem em estoque. O sistema calcula o que falta e quanto custa completar.</p>
+                <div id="ins-aviso"></div>
+                <div id="ins-conteudo">
+                    <label for="filtro-safra">Mostrar</label>
+                    <select id="filtro-safra" class="campo"></select>
+ 
+                    <ul id="resumo-insumos"></ul>
+ 
+                    <div class="tabela">
+                        <table>
+                            <caption>Fertilizantes</caption>
+                            <thead>
+                                <tr><th>Produto</th><th class="num">Possui</th><th class="num">Precisa</th><th class="num">Falta</th><th class="num">Preço unitário</th><th class="num">Custo p/ completar</th><th>Estoque</th><th>Situação</th><th>Ação</th></tr>
+                            </thead>
+                            <tbody id="lista-insumos"></tbody>
+                            <tfoot id="total-insumos"></tfoot>
+                        </table>
+                    </div>
+ 
+                    <h3>Lista de compras</h3>
+                    <div id="lista-compras"></div>
+ 
+                    <form id="form-insumo">
+                        <fieldset>
+                            <legend>Novo produto</legend>
+                            <label for="ins-nome">Nome do produto *</label>
+                            <input type="text" id="ins-nome" class="campo" required>
+                            <label for="ins-safra">Safra *</label>
+                            <select id="ins-safra" class="campo"></select>
+                            <label for="ins-unidade">Unidade</label>
+                            <select id="ins-unidade" class="campo"><option>kg</option><option>t</option><option>sc</option><option>L</option></select>
+                            <label for="ins-possui">Quanto possui</label>
+                            <input type="number" id="ins-possui" class="campo" min="0" step="any" value="0">
+                            <label for="ins-precisa">Quanto precisa *</label>
+                            <input type="number" id="ins-precisa" class="campo" min="0" step="any" required>
+                            <label for="ins-preco">Preço por unidade (R$) *</label>
+                            <input type="number" id="ins-preco" class="campo" min="0" step="0.01" required>
+                            <input type="submit" value="Adicionar produto" class="botao">
+                        </fieldset>
+                    </form>
+                    <div id="ins-msg"></div>
+ 
+                    <form id="form-calc">
+                        <fieldset>
+                            <legend>Calculadora de quantidade</legend>
+                            <p>Descubra quanto comprar: área da safra &times; dose por hectare.</p>
+                            <label for="calc-safra">Safra</label>
+                            <select id="calc-safra" class="campo"></select>
+                            <label for="calc-dose">Dose por hectare</label>
+                            <input type="number" id="calc-dose" class="campo" min="0" step="any" placeholder="Ex.: 300">
+                            <label for="calc-unidade">Unidade</label>
+                            <select id="calc-unidade" class="campo"><option>kg</option><option>t</option><option>sc</option><option>L</option></select>
+                            <p id="calc-resultado"></p>
+                        </fieldset>
+                    </form>
+                </div>
+            </section>
+        </div>
+ 
+        <div id="footer">
+            <p>&copy; 2026 Safra Viva.</p>
+        </div>
+        <script src="../java/dados.js"></script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maquinário</title>
+    <link rel="stylesheet" href="../css/maquinario.css">
+</head>
+<body>
+        <div id="header">
+            <h1>Safra Viva</h1>
+            <img src="../img/campo.svg" alt="Lavoura ao amanhecer">
+            <div id="nav">
+                <a href="home.html">Home</a>
+                <a href="producao.html">Produção</a>
+                <a href="cronograma.html">Cronograma</a>
+                <a href="pragas.html">Pragas</a>
+                <a href="fertilizantes.html">Fertilizantes</a>
+                <a href="custos.html">Custos</a>
+                <a href="ganho.html">Ganho futuro</a>
+                <a href="maquinario.html" class="ativo">Maquinário</a>
+                <a href="fornecedores.html">Fornecedores</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+ 
+        <div id="main">
+ 
+            <section>
+                <h2>Maquinário disponível</h2>
+                <p>Equipamentos da fazenda, com a situação atual e o controle de revisões. Altere a situação e as horas de uso direto na tabela.</p>
+                <ul id="maq-resumo"></ul>
+                <div id="maq-alerta"></div>
+ 
+                <div class="tabela">
+                    <table>
+                        <caption>Equipamentos</caption>
+                        <thead>
+                            <tr><th>Equipamento</th><th>Tipo</th><th>Ano</th><th>Situação</th><th class="num">Horas de uso</th><th class="num">Revisão a cada</th><th class="num">Próxima revisão em</th><th>Ação</th></tr>
+                        </thead>
+                        <tbody id="lista-maquinas"></tbody>
+                    </table>
+                </div>
+ 
+                <form id="form-maquina">
+                    <fieldset>
+                        <legend>Novo equipamento</legend>
+                        <label for="maq-nome">Nome *</label>
+                        <input type="text" id="maq-nome" class="campo" placeholder="Ex.: Trator 4x4 de 110 cv" required>
+                        <label for="maq-tipo">Tipo *</label>
+                        <input type="text" id="maq-tipo" class="campo" placeholder="Ex.: Trator" required>
+                        <label for="maq-ano">Ano</label>
+                        <input type="number" id="maq-ano" class="campo" min="1950" max="2100">
+                        <label for="maq-status">Situação</label>
+                        <select id="maq-status" class="campo">
+                            <option>Disponível</option>
+                            <option>Em uso</option>
+                            <option>Em manutenção</option>
+                        </select>
+                        <label for="maq-horas">Horas de uso até hoje</label>
+                        <input type="number" id="maq-horas" class="campo" min="0" step="any" value="0">
+                        <label for="maq-ultima">Horas na última revisão</label>
+                        <input type="number" id="maq-ultima" class="campo" min="0" step="any" value="0">
+                        <label for="maq-intervalo">Revisão a cada (horas)</label>
+                        <input type="number" id="maq-intervalo" class="campo" min="1" step="any" value="250">
+                        <input type="submit" value="Adicionar equipamento" class="botao">
+                    </fieldset>
+                </form>
+                <div id="maq-msg"></div>
+            </section>
+ 
+            <section>
+                <h2>Como funciona o controle de revisão</h2>
+                <details>
+                    <summary>Como é calculada a próxima revisão?</summary>
+                    <p>Próxima revisão em = intervalo de revisão &minus; (horas de uso &minus; horas da última revisão). Quando chega a zero, a revisão está vencida.</p>
+                </details>
+                <details>
+                    <summary>O que faz o botão &ldquo;Revisão feita&rdquo;?</summary>
+                    <p>Marca as horas de uso atuais como a última revisão, reiniciando a contagem.</p>
+                </details>
+            </section>
+        </div>
+ 
+        <div id="footer">
+            <p>&copy; 2026 Safra Viva.</p>
+        </div>
+    <script src="../java/dados.js"></script>
+</body>
+</html>

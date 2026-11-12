@@ -323,24 +323,3 @@ input {
     color: #ffffff;
 }
  
- 
-/* ---------- Celular ---------- */
- 
-@media (max-width: 768px) {
-    #main {
-        padding: 16px;
-    }
- 
-    #header h1 {
-        font-size: 26px;
-    }
- 
-    #header img {
-        height: 120px;
-    }
- 
-    #nav a {
-        display: block;
-        text-align: center;
-    }
-}

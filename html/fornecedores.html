@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/fornecedores.css">
+</head>
+<body>
+        <div id="header">
+            <h1>Safra Viva</h1>
+            <img src="../img/campo.svg" alt="Lavoura ao amanhecer">
+            <div id="nav">
+                <a href="home.html">Home</a>
+                <a href="producao.html">Produção</a>
+                <a href="cronograma.html">Cronograma</a>
+                <a href="pragas.html">Pragas</a>
+                <a href="fertilizantes.html">Fertilizantes</a>
+                <a href="custos.html">Custos</a>
+                <a href="ganho.html">Ganho futuro</a>
+                <a href="maquinario.html">Maquinário</a>
+                <a href="fornecedores.html" class="ativo">Fornecedores</a>
+                <a href="cadastro.html">Cadastro</a>
+            </div>
+        </div>
+ 
+        <div id="main">
+            <section>
+                <h2>Lista de fornecedores</h2>
+                <p>Quem fornece sementes, fertilizantes e defensivos agrícolas, com prazo de entrega, pagamento e nota.</p>
+ 
+                <label for="filtro-categoria">Tipo de produto</label>
+                <select id="filtro-categoria" class="campo">
+                    <option value="todas">Todos</option>
+                    <option value="Sementes">Sementes</option>
+                    <option value="Fertilizantes">Fertilizantes</option>
+                    <option value="Defensivos">Defensivos</option>
+                </select>
+                <label for="busca-fornecedor">Buscar</label>
+                <input type="search" id="busca-fornecedor" class="campo" placeholder="Nome, cidade ou produto">
+ 
+                <div class="tabela">
+                    <table>
+                        <caption>Fornecedores cadastrados</caption>
+                        <thead>
+                            <tr><th>Fornecedor</th><th>Fornece</th><th>Contato</th><th>Telefone</th><th class="num">Entrega</th><th>Pagamento</th><th class="num">Nota</th><th>Produtos</th><th>Ação</th></tr>
+                        </thead>
+                        <tbody id="lista-fornecedores"></tbody>
+                    </table>
+                </div>
+            </section>
+ 
+            <section>
+                <h2>Novo fornecedor</h2>
+                <form id="form-fornecedor">
+                    <fieldset>
+                        <legend>Dados do fornecedor</legend>
+                        <label for="forn-nome">Nome *</label>
+                        <input type="text" id="forn-nome" class="campo" required>
+ 
+                        <p class="titulo-grupo">O que fornece *</p>
+                        <label class="opcao"><input type="checkbox" name="categorias" value="Sementes"> Sementes</label>
+                        <label class="opcao"><input type="checkbox" name="categorias" value="Fertilizantes"> Fertilizantes</label>
+                        <label class="opcao"><input type="checkbox" name="categorias" value="Defensivos"> Defensivos</label>
+ 
+                        <label for="forn-contato">Pessoa de contato</label>
+                        <input type="text" id="forn-contato" class="campo">
+                        <label for="forn-telefone">Telefone</label>
+                        <input type="tel" id="forn-telefone" class="campo" placeholder="(00) 0000-0000">
+                        <label for="forn-cidade">Cidade</label>
+                        <input type="text" id="forn-cidade" class="campo" placeholder="Ex.: Cascavel · PR">
+                        <label for="forn-prazo">Prazo de entrega (dias)</label>
+                        <input type="number" id="forn-prazo" class="campo" min="0" value="5">
+                        <label for="forn-pagamento">Condição de pagamento</label>
+                        <input type="text" id="forn-pagamento" class="campo" placeholder="Ex.: 30 dias">
+                        <label for="forn-nota">Nota (1 a 5)</label>
+                        <select id="forn-nota" class="campo">
+                            <option>5</option><option>4</option><option>3</option><option>2</option><option>1</option>
+                        </select>
+                        <label for="forn-produtos">Produtos</label>
+                        <textarea id="forn-produtos" class="campo" rows="3"></textarea>
+ 
+                        <input type="submit" value="Adicionar fornecedor" class="botao">
+                    </fieldset>
+                </form>
+                <div id="forn-msg"></div>
+            </section>
+ 
+            <section>
+                <h2>Fornecedores por tipo de produto</h2>
+                <h3>Sementes</h3>
+                <ul id="forn-sementes"></ul>
+                <h3>Fertilizantes</h3>
+                <ul id="forn-fertilizantes"></ul>
+                <h3>Defensivos agrícolas</h3>
+                <ul id="forn-defensivos"></ul>
+            </section>
+        </div>
+        <div id="footer">
+            <p>&copy; 2026 Safra Viva.</p>
+        </div>
+        <script src="../java/dados.js"></script>
+</body>
+</html>

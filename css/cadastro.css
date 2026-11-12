@@ -1,26 +1,9 @@
-/* =========================================================
-   css_externo/cadastro.css  |  Projeto Safra Viva
-   Folha de estilo EXTERNA da página: Cadastro de safra (html/cadastro.html)
-   No <head> da página:
-   <link rel="stylesheet" href="../css_externo/cadastro.css">
-   ========================================================= */
-
 
 /* ---------- Página e largura ---------- */
 
 body {
     margin: 0;
-    background-color: #e4f1e7;
-}
-
-#body {
-    font-family: Arial, Verdana, sans-serif;
-    font-size: 16px;
-    line-height: 26px;
-    background-color: #ffffff;
-    color: #17261c;
-    max-width: 1100px;
-    margin: 0 auto;
+    background-color: #fafafa;
 }
 
 
@@ -33,7 +16,7 @@ body {
 }
 
 #header h1 {
-    color: #1b5233;
+    color: #053017; 
     font-size: 34px;
     letter-spacing: 3px;
     text-transform: uppercase;
@@ -82,7 +65,7 @@ section {
 }
 
 #main h2 {
-    color: #1b5233;
+    color: #053017;
     font-size: 26px;
     border-bottom: 2px solid #a9d3b4;
     padding-bottom: 6px;
@@ -90,7 +73,7 @@ section {
 }
 
 #main h3 {
-    color: #226b42;
+    color: #053017;
     font-size: 19px;
 }
 
@@ -341,26 +324,4 @@ input {
 
 #footer a {
     color: #ffffff;
-}
-
-
-/* ---------- Celular ---------- */
-
-@media (max-width: 768px) {
-    #main {
-        padding: 16px;
-    }
-
-    #header h1 {
-        font-size: 26px;
-    }
-
-    #header img {
-        height: 120px;
-    }
-
-    #nav a {
-        display: block;
-        text-align: center;
-    }
 }
