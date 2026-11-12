@@ -25,86 +25,48 @@
         </div>
  
         <div id="main">
+            <noscript><p class="msg msg-erro">Esta página precisa de JavaScript para funcionar. Ative o JavaScript no navegador.</p></noscript>
+ 
             <section>
                 <h2>Cronograma de produção</h2>
-                <p>Etapas da safra de <strong>soja</strong> no Talhão A &middot; Várzea (42 <abbr title="hectares">ha</abbr>), com a situação em novembro de 2026.</p>
+                <div id="cron-aviso"></div>
+                <div id="cron-conteudo">
+                    <label for="sel-safra">Safra</label>
+                    <select id="sel-safra" class="campo"></select>
  
-                <div class="tabela">
-                    <table>
-                        <caption>Etapas da safra de soja 2026/27</caption>
-                        <thead>
-                            <tr>
-                                <th>Etapa</th>
-                                <th>Início</th>
-                                <th>Fim</th>
-                                <th>Situação</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Preparo e calagem</td>
-                                <td>11/09/2026</td>
-                                <td>29/09/2026</td>
-                                <td class="ok">Concluída</td>
-                            </tr>
-                            <tr>
-                                <td>Plantio e adubação de base</td>
-                                <td>30/09/2026</td>
-                                <td>14/10/2026</td>
-                                <td class="ok">Concluída</td>
-                            </tr>
-                            <tr>
-                                <td>Controle de plantas daninhas</td>
-                                <td>24/10/2026</td>
-                                <td>03/11/2026</td>
-                                <td class="ok">Concluída</td>
-                            </tr>
-                            <tr>
-                                <td>Controle de pragas e doenças</td>
-                                <td>08/11/2026</td>
-                                <td>12/01/2027</td>
-                                <td class="alerta">Em andamento</td>
-                            </tr>
-                            <tr>
-                                <td>Colheita</td>
-                                <td>11/02/2027</td>
-                                <td>08/03/2027</td>
-                                <td>Prevista</td>
-                            </tr>
-                        </tbody>
-                    </table>
+                    <div class="tabela">
+                        <table>
+                            <caption id="cron-caption">Etapas</caption>
+                            <thead><tr><th>Etapa</th><th>Início</th><th>Fim</th><th>Situação</th><th>Ação</th></tr></thead>
+                            <tbody id="lista-etapas"></tbody>
+                        </table>
+                    </div>
+ 
+                    <h3>Andamento do ciclo</h3>
+                    <p><progress id="cron-progresso" max="100" value="0"></progress> <span id="cron-pct"></span></p>
+                    <p id="cron-atual"></p>
+ 
+                    <form id="form-etapa">
+                        <fieldset>
+                            <legend>Nova etapa</legend>
+                            <label for="etapa-nome">Nome da etapa *</label>
+                            <input type="text" id="etapa-nome" class="campo" placeholder="Ex.: Adubação de cobertura" required>
+                            <label for="etapa-inicio">Início *</label>
+                            <input type="date" id="etapa-inicio" class="campo" required>
+                            <label for="etapa-fim">Fim *</label>
+                            <input type="date" id="etapa-fim" class="campo" required>
+                            <input type="submit" value="Adicionar etapa" class="botao">
+                        </fieldset>
+                    </form>
+                    <div id="etapa-msg"></div>
                 </div>
- 
-                <div class="caixa">
-                    <h3>Atenção</h3>
-                    <p>Colheita prevista para fevereiro.Confira as máquinas na página <a href="maquinario.html">Maquinário</a>.</p>
-                    <p>Mudança de data:  <ins>11/02/2027</ins></p>
-                </div>
-            </section>
- 
-            <section>
-                <h2>Andamento do ciclo</h2>
-                <p>De 11/09/2026 a 08/03/2027, o ciclo da soja está em 33%:</p>
-                <progress value="33" max="100">33%</progress> 33%
-            </section>
- 
-            <section>
-                <h2>O que acontece em cada etapa</h2>
-                <ol>
-                    <li><strong>Preparo e calagem:</strong> análise do solo e correção da acidez com calcário.</li>
-                    <li><strong>Plantio e adubação de base:</strong> semeadura e aplicação do adubo de base.</li>
-                    <li><strong>Controle de plantas daninhas:</strong> aplicação de herbicida.</li>
-                    <li><strong>Controle de pragas e doenças:</strong> monitoramento da lavoura e aplicação de inseticida e fungicida quando necessário.</li>
-                    <li><strong>Colheita:</strong> colheita dos grãos e armazenamento.</li>
-                </ol>
-                <p>O cronograma de uma nova safra é criado na página <a href="cadastro.html">Cadastro</a>.</p>
             </section>
         </div>
  
         <div id="footer">
             <p>&copy; 2026 Safra Viva.</p>
-
         </div>
-    
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>

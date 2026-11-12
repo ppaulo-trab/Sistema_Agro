@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Produção | Safra Viva</title>
-    <link rel="stylesheet" href="../css/producao.css">
+    <link rel="stylesheet" href="../css/producao.css">   
 </head>
 <body>
     <div id="header">
@@ -24,99 +24,29 @@
             </div>
         </div>
         <div id="main">
+            <noscript><p class="msg msg-erro">Esta página precisa de JavaScript para funcionar. Ative o JavaScript no navegador.</p></noscript>
+ 
             <section>
-                <h2>Produção e manejo da lavoura</h2>
-                <p class="recuo">Nesta página você registra o que será plantado em cada talhão da propriedade, como a lavoura é manejada e quanto custa produzir.</p>
-            </section>
-            <div class="tabela">
+                <h2>Tipo de produção e manejo</h2>
+                <p>Talhões cadastrados, com a cultura, a área e o manejo utilizado. Para incluir um novo, use a página <a href="cadastro.html">Cadastro</a>.</p>
+                <div class="tabela">
                     <table>
-                        <caption>Talhões da Fazenda Boa Esperança &ndash; safra 2026/27</caption>
+                        <caption id="prod-caption">Talhões</caption>
                         <thead>
-                            <tr>
-                                <th>Talhão</th>
-                                <th>Tipo de produção</th>
-                                <th class="num">Área (ha)</th>
-                                <th>Solo</th>
-                                <th>Manejo utilizado</th>
-                            </tr>
+                            <tr><th>Talhão</th><th>Cultura</th><th class="num">Área (ha)</th><th>Solo</th><th>Manejo</th><th>Observações</th><th>Ação</th></tr>
                         </thead>
-                        <tbody>
-                            <tr>
-                                <td>Talhão A &middot; Várzea</td>
-                                <td>Soja</td>
-                                <td class="num">42</td>
-                                <td>Argiloso</td>
-                                <td>Plantio direto</td>
-                            </tr>
-                            <tr>
-                                <td>Talhão B &middot; Encosta</td>
-                                <td>Milho</td>
-                                <td class="num">30</td>
-                                <td>Argilo-arenoso</td>
-                                <td>Plantio direto</td>
-                            </tr>
-                            <tr>
-                                <td>Talhão C &middot; Alto</td>
-                                <td>Café</td>
-                                <td class="num">18</td>
-                                <td>Latossolo</td>
-                                <td>Convencional</td>
-                            </tr>
-                            <tr>
-                                <td>Talhão D &middot; Estufa</td>
-                                <td>Hortaliças</td>
-                                <td class="num">3</td>
-                                <td>Franco-arenoso</td>
-                                <td>Orgânico irrigado</td>
-                            </tr>
-                        </tbody>
+                        <tbody id="lista-safras"></tbody>
                         <tfoot>
-                            <tr>
-                                <td colspan="2">Total</td>
-                                <td class="num">93</td>
-                                <td colspan="2"></td>
-                            </tr>
+                            <tr><td colspan="2">Área total</td><td class="num" id="total-area"></td><td colspan="4"></td></tr>
                         </tfoot>
                     </table>
                 </div>
- 
-                <div class="caixa">
-                    <h3>Como ler a tabela</h3>
-                    <ul>
-                        <li><strong>Talhão:</strong> área da fazenda com um só tipo de plantio.</li>
-                        <li><strong>Área:</strong> tamanho em ha.</li>
-                        <li><strong>Manejo:</strong> a forma de cuidar do solo e da lavoura.</li>
-                    </ul>
-                </div>
-            </section>
- 
-            <section>
-                <h2>Manejos utilizados</h2>
-                <p>Clique em um título para ver o que significa cada manejo.</p>
- 
-                <details>
-                    <summary>Plantio direto</summary>
-                    <p>O solo não é revolvido. A palha da safra anterior fica sobre a terra, o que protege contra a erosão e ajuda a manter a umidade.</p>
-                </details>
- 
-                <details>
-                    <summary>Convencional</summary>
-                    <p>O solo é arado e gradeado antes do plantio. A terra fica solta, mas mais exposta à erosão.</p>
-                </details>
- 
-                <details>
-                    <summary>Orgânico irrigado</summary>
-                    <p>Usa adubo orgânico e controle biológico de pragas, sem agrotóxicos sintéticos. A água vem de irrigação por gotejamento.</p>
-                </details>
- 
-                <p>Veja as etapas de cada plantio no <a href="cronograma.html">Cronograma</a>.</p>
             </section>
         </div>
- 
         <div id="footer">
-            <p>&copy; 2026 Safra Viva. Projeto de Front-End para Web. Dados fictícios para estudo.</p>
-            <p><a href="#body">Voltar ao topo</a></p>
+            <p>&copy; 2026 Safra Viva</p>
         </div>
-    
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>

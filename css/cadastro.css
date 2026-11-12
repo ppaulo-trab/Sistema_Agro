@@ -1,0 +1,366 @@
+/* =========================================================
+   css_externo/cadastro.css  |  Projeto Safra Viva
+   Folha de estilo EXTERNA da página: Cadastro de safra (html/cadastro.html)
+   No <head> da página:
+   <link rel="stylesheet" href="../css_externo/cadastro.css">
+   ========================================================= */
+
+
+/* ---------- Página e largura ---------- */
+
+body {
+    margin: 0;
+    background-color: #e4f1e7;
+}
+
+#body {
+    font-family: Arial, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 26px;
+    background-color: #ffffff;
+    color: #17261c;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* ---------- Cabeçalho, banner e menu ---------- */
+
+#header {
+    background-color: #f2f8f3;
+    text-align: center;
+    padding-top: 12px;
+}
+
+#header h1 {
+    color: #1b5233;
+    font-size: 34px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin: 8px 0 12px 0;
+}
+
+#header img {
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+#nav {
+    background-color: #226b42;
+    padding: 6px 12px;
+}
+
+#nav a {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 12px;
+}
+
+#nav a:hover {
+    background-color: #143d28;
+}
+
+/* link da página atual */
+#nav a.ativo {
+    background-color: #ffffff;
+    color: #1b5233;
+}
+
+
+/* ---------- Conteúdo ---------- */
+
+#main {
+    padding: 24px 20px;
+}
+
+section {
+    margin-bottom: 28px;
+}
+
+#main h2 {
+    color: #1b5233;
+    font-size: 26px;
+    border-bottom: 2px solid #a9d3b4;
+    padding-bottom: 6px;
+    margin-top: 0;
+}
+
+#main h3 {
+    color: #226b42;
+    font-size: 19px;
+}
+
+p {
+    margin: 10px 0;
+}
+
+/* recuo na primeira linha do parágrafo */
+.recuo {
+    text-indent: 30px;
+}
+
+a {
+    color: #226b42;
+}
+
+a:hover {
+    color: #143d28;
+}
+
+ul, ol {
+    padding-left: 24px;
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+small {
+    font-size: 13px;
+    color: #455a4d;
+}
+
+/* caixa de destaque */
+.caixa {
+    background-color: #f2f8f3;
+    border: 1px solid #cfe6d5;
+    border-left: 6px solid #4ea36a;
+    padding: 12px 16px;
+    margin: 16px 0;
+}
+
+.caixa h3 {
+    margin-top: 0;
+}
+
+
+/* ---------- Tabelas ---------- */
+
+/* a div com rolagem evita estourar a tela no celular */
+.tabela {
+    overflow-x: auto;
+    margin: 12px 0 20px 0;
+}
+
+table {
+    width: 100%;
+    min-width: 560px;
+    border-collapse: collapse;
+}
+
+caption {
+    text-align: left;
+    font-weight: bold;
+    color: #226b42;
+    padding-bottom: 8px;
+}
+
+th, td {
+    border: 1px solid #cfe6d5;
+    padding: 9px 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #226b42;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+tbody tr:hover {
+    background-color: #f2f8f3;
+}
+
+tfoot td {
+    background-color: #e4f1e7;
+    font-weight: bold;
+}
+
+/* classe para alinhar números à direita */
+.num {
+    text-align: right;
+}
+
+table meter {
+    width: 110px;
+}
+
+
+/* ---------- Situação (classes de cor) ---------- */
+
+.ok {
+    color: #1b5233;
+    font-weight: bold;
+}
+
+.alerta {
+    color: #85590f;
+    font-weight: bold;
+}
+
+.falta {
+    color: #a93f2a;
+    font-weight: bold;
+}
+
+
+/* ---------- Marcação de texto e elementos interativos ---------- */
+
+mark {
+    background-color: #f7eed8;
+    padding: 2px 4px;
+}
+
+del {
+    color: #a93f2a;
+}
+
+ins {
+    color: #1b5233;
+}
+
+abbr {
+    cursor: help;
+}
+
+progress, meter {
+    width: 100%;
+    max-width: 280px;
+    height: 18px;
+}
+
+details {
+    border: 1px solid #cfe6d5;
+    padding: 10px 14px;
+    margin-bottom: 10px;
+}
+
+summary {
+    cursor: pointer;
+    font-weight: bold;
+    color: #226b42;
+}
+
+
+/* ---------- Formulário ---------- */
+
+fieldset {
+    border: 1px solid #a9d3b4;
+    margin-bottom: 20px;
+    padding: 8px 16px 16px 16px;
+}
+
+legend {
+    color: #226b42;
+    font-weight: bold;
+    padding: 0 8px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 4px;
+}
+
+/* classe dos campos de texto, número, data e lista */
+.campo {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 420px;
+    padding: 9px 10px;
+    border: 1px solid #a9d3b4;
+    font-size: 16px;
+    font-family: Arial, Verdana, sans-serif;
+}
+
+textarea.campo {
+    max-width: 100%;
+}
+
+/* cor verde nos controles (radio, checkbox, barra) */
+input {
+    accent-color: #226b42;
+}
+
+/* radio e checkbox lado a lado */
+.opcao {
+    display: inline-block;
+    font-weight: normal;
+    margin-right: 18px;
+}
+
+.titulo-grupo {
+    font-weight: bold;
+    margin: 16px 0 0 0;
+}
+
+.botao {
+    background-color: #226b42;
+    color: #ffffff;
+    border: 2px solid #226b42;
+    padding: 10px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-right: 8px;
+}
+
+.botao:hover {
+    background-color: #143d28;
+    border-color: #143d28;
+}
+
+.botao-limpar {
+    background-color: #ffffff;
+    color: #226b42;
+}
+
+.botao-limpar:hover {
+    background-color: #e4f1e7;
+    border-color: #226b42;
+}
+
+
+/* ---------- Rodapé ---------- */
+
+#footer {
+    background-color: #143d28;
+    color: #cfe6d5;
+    text-align: center;
+    padding: 14px;
+    font-size: 14px;
+}
+
+#footer p {
+    margin: 4px 0;
+}
+
+#footer a {
+    color: #ffffff;
+}
+
+
+/* ---------- Celular ---------- */
+
+@media (max-width: 768px) {
+    #main {
+        padding: 16px;
+    }
+
+    #header h1 {
+        font-size: 26px;
+    }
+
+    #header img {
+        height: 120px;
+    }
+
+    #nav a {
+        display: block;
+        text-align: center;
+    }
+}

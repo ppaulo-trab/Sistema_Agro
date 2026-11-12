@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Safra Viva</title>
-    <link rel="stylesheet" href="../css/home.css">
+    <link rel="stylesheet" href="../css/home.css"> 
 </head>
 <body>
     <div id="header">
@@ -24,53 +24,54 @@
             </div>
         </div>
         <div id="main">
+            <noscript><p class="msg msg-erro">Esta página precisa de JavaScript para funcionar. Ative o JavaScript no navegador.</p></noscript>
+ 
             <section>
                 <h2>Bem-vindo ao Safra Viva</h2>
-                <p class="recuo">O <strong>Safra Viva</strong> é um sistema para organizar a produção de uma propriedade rural. Nele você registra o que será plantado, como a lavoura é manejada, quanto custa produzir e quanto se espera ganhar na colheita.</p>
-            </section>
-            <section>
-                <h2>O que o sistema controla</h2>
- 
-                <h3>Planejamento</h3>
-                <ul>
-                    <li><a href="producao.html">Produção e manejo</a>: o que é plantado em cada talhão e como.</li>
-                    <li><a href="cronograma.html">Cronograma</a>: etapas e datas de cada safra.</li>
-                </ul>
- 
-                <h3>Insumos</h3>
-                <ul>
-                    <li><a href="pragas.html">Controle de pragas</a>: defensivos que tem, que faltam e quanto custam.</li>
-                    <li><a href="fertilizantes.html">Controle de fertilizantes</a>: quanto tem, quanto precisa e quanto custa.</li>
-                </ul>
- 
-                <h3>Finanças</h3>
-                <ul>
-                    <li><a href="custos.html">Custo de produção</a>: quanto custa produzir cada safra.</li>
-                    <li><a href="ganho.html">Ganho futuro</a>: lucro esperado com base no valor da safra.</li>
-                </ul>
- 
-                <h3>Recursos</h3>
-                <ul>
-                    <li><a href="maquinario.html">Maquinário</a>: máquinas disponíveis e revisões.</li>
-                    <li><a href="fornecedores.html">Fornecedores</a>: quem vende sementes, fertilizantes e defensivos.</li>
-                </ul>
- 
-                <p>Para registrar uma nova safra, acesse a página <a href="cadastro.html">Cadastro</a>.</p>
+                <p>Sistema para gerenciar a produção agrícola da sua fazenda. Cadastre suas safras e acompanhe cronograma, insumos, custos, ganho futuro, maquinário e fornecedores.</p>
+                <p id="aviso-exemplos" class="caixa" hidden><mark>Você está vendo dados de exemplo.</mark> Clique em &ldquo;Começar do zero&rdquo; abaixo para apagar tudo e cadastrar os seus próprios dados.</p>
             </section>
  
             <section>
-                <h2>A fazenda em números</h2>
-                <ul>
-                    <li>Área total: <strong>93 <abbr title="hectares">ha</abbr></strong>, divididos em 4 talhões</li>
-                    <li>Receita estimada: <strong>R$ 1.267.248</strong></li>
-                    <li>Custo de produção: <strong>R$ 477.072</strong></li>
-                    <li>Lucro projetado: <strong>R$ 790.176</strong></li>
-                </ul>
+                <h2>Resumo da fazenda</h2>
+                <ul id="resumo"></ul>
+                <form id="form-fazenda">
+                    <fieldset>
+                        <legend>Dados da fazenda</legend>
+                        <label for="nome-fazenda">Nome da fazenda</label>
+                        <input type="text" id="nome-fazenda" class="campo" required>
+                        <input type="submit" value="Salvar nome" class="botao">
+                    </fieldset>
+                </form>
+                <div id="msg-dados"></div>
+            </section>
+ 
+            <section>
+                <h2>Alertas</h2>
+                <div id="alertas"></div>
+            </section>
+ 
+            <section>
+                <h2>Como usar</h2>
+                <ol>
+                    <li>Cadastre uma safra na página <a href="cadastro.html">Cadastro</a>.</li>
+                    <li>Informe os insumos que precisa em <a href="pragas.html">Pragas</a> e <a href="fertilizantes.html">Fertilizantes</a>.</li>
+                    <li>Confira o <a href="custos.html">custo</a> e o <a href="ganho.html">ganho futuro</a>.</li>
+                    <li>Registre o <a href="maquinario.html">maquinário</a> e os <a href="fornecedores.html">fornecedores</a>.</li>
+                </ol>
+                <details>
+                    <summary>Onde ficam os meus dados?</summary>
+                    <p>Ficam guardados no próprio navegador deste computador (localStorage). Não são enviados para nenhum servidor. Se limpar os dados do navegador, eles somem.</p>
+                </details>
+                <button type="button" id="btn-zerar" class="botao botao-limpar">Começar do zero</button>
+                <button type="button" id="btn-exemplo" class="botao">Restaurar exemplos</button>
             </section>
         </div>
  
         <div id="footer">
             <p>&copy; 2026 Safra Viva.</p>
         </div>
+    </div>
+    <script src="../js/script.js"></script>
 </body>
 </html>
