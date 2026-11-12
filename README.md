@@ -55,9 +55,9 @@ safra-viva/
 │   └── cadastro.css       # Cada página tem o seu CSS externo
 ├── js/
 │   ├── dados.js           # Parte comum: dados, cálculos e funções úteis
-│   ├── insumos.js         # Parte comum de Pragas e Fertilizantes
-│   └── home.js, producao.js, cronograma.js, pragas.js, fertilizantes.js,
-│       custos.js, ganho.js, maquinario.js, fornecedores.js, cadastro.js
+│   ├── produção.js         # Parte de manejo e produção
+│   |── cadastro.js         # Parte de dados da propriedade
+    └── home.js             # Parte de resumo e alertas da fazenda
 └── img/
     └── campo.svg          # Banner do cabeçalho
 ```
@@ -74,3 +74,8 @@ Recomenda-se usar a extensão **Live Server** do Visual Studio Code (ou o Chrome
 ## Objetivo
 
 Forncer uma platafroma de gerenciamento agrícola em que o produtor veja tudo que possui para um melhor gerenciamento 
+
+## Observação
+
+- O README foi desenvolvido pelo IA.
+- Existe as pasta de video e audio, como estao vazias não realizou o upload da pasta no github
