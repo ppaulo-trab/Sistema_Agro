@@ -1,6 +1,6 @@
 /* 
    Projeto Safra Viva
-   Parte COMUM a todas as páginas (carregue este arquivo ANTES do js da página):
+   Parte comum a todas as páginas:
    1. guarda os dados do cliente no navegador (localStorage);
    2. faz os cálculos (falta, custo, receita, lucro, revisão);
    3. funções úteis (formatar moeda, datas, proteger texto). */
@@ -187,7 +187,6 @@ function carregar() {
       if (lido && lido.safras && lido.insumos && lido.maquinas && lido.fornecedores) return lido;
     }
   } catch (erro) {
-    /* sem armazenamento: usa os dados de exemplo só nesta página */
   }
   return dadosExemplo();
 }

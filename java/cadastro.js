@@ -1,5 +1,5 @@
-/* js/cadastro.js  |  Página Cadastro
-   Usa as funções de dados.js (carregue dados.js antes). */
+/* Página Cadastro */
+  
 
 function paginaCadastro() {
   $('form-safra').addEventListener('submit', function (ev) {
